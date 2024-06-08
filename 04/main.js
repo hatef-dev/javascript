@@ -4,6 +4,7 @@ const resturant = {
   catrgories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
+  getNum: 0,
   openingHour: {
     thu: {
       open: 12,
@@ -77,10 +78,73 @@ const newRestourant = {found : 1998, ...resturant}
 console.log(newRestourant)
 */
 
-console.log(0 || 1);
-console.log("hatef" && "salam" && false);
+// console.log(0 || 1);
+// console.log("hatef" && "salam" && false);
 
 
-const number = resturant.getNum || 20;
+// const number = resturant.getNum ?? 20;
 
-console.log(number)
+// console.log(number)
+
+
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
+
+const [players1, players2] = game.players
+console.log(players1, players2)
+
+const [gkBayern, ...filedPlayersBayern] = players1
+const [gkBorrussia, ...filedPlayersBorrussia] = players2
+
+const allPlayer = [...players1, ...players2]
+console.log(allPlayer)
+
+const players1Final = [...players1, 'Tiago', 'Coutinho', 'Perisic']
+
+const {team1, x: draw, team2} = game.odds
+console.log(team1, draw, team2)
+
+const printGoal = function (...players) {
+  console.log(players);
+  console.log(`${players.length} goals were scored`)
+}
+
+printGoal(...game.scored)
