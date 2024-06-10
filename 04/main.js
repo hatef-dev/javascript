@@ -14,15 +14,15 @@ const resturant = {
       open: 11,
       close: 23,
     },
-    sar: {
+    sat: {
       open: 0,
       close: 24,
     },
   },
-  order: function (startMenuIndex, mainMenuIndex) {
+  order(startMenuIndex, mainMenuIndex) {
     return [this.starterMenu[startMenuIndex], this.mainMenu[mainMenuIndex]];
   },
-  orderDelivery: function ({ startIndex, mainIndex, time }) {
+  orderDelivery({ startIndex, mainIndex, time }) {
     console.log(
       `the starter menu is ${this.starterMenu[startIndex]} and main food is ${this.mainMenu[mainIndex]} at the ${time}`
     );
@@ -81,46 +81,44 @@ console.log(newRestourant)
 // console.log(0 || 1);
 // console.log("hatef" && "salam" && false);
 
-
 // const number = resturant.getNum ?? 20;
 
 // console.log(number)
 
-
 const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
+  team1: "Bayern Munich",
+  team2: "Borrussia Dortmund",
   players: [
     [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
+      "Neuer",
+      "Pavard",
+      "Martinez",
+      "Alaba",
+      "Davies",
+      "Kimmich",
+      "Goretzka",
+      "Coman",
+      "Muller",
+      "Gnarby",
+      "Lewandowski",
     ],
     [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
+      "Burki",
+      "Schulz",
+      "Hummels",
+      "Akanji",
+      "Hakimi",
+      "Weigl",
+      "Witsel",
+      "Hazard",
+      "Brandt",
+      "Sancho",
+      "Gotze",
     ],
   ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
+  score: "4:0",
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  date: "Nov 9th, 2037",
   odds: {
     team1: 1.33,
     x: 3.25,
@@ -128,6 +126,20 @@ const game = {
   },
 };
 
+// for(const [Goal, scored] of game.scored.entries()){
+//   console.log(`${Goal+ 1} : ${scored}` )
+// }
+// const y = Object.values(game.odds)
+// console.log(y)
+// let sum = 0
+// for (const item of y) {
+//   sum+= item;
+  
+// } 
+// console.log(Math.trunc((sum /  y.length)))
+
+
+/*
 const [players1, players2] = game.players
 console.log(players1, players2)
 
@@ -148,3 +160,23 @@ const printGoal = function (...players) {
 }
 
 printGoal(...game.scored)
+*/
+
+// const menu = [...resturant.mainMenu, ...resturant.starterMenu];
+// console.log(menu);
+
+// for (const item of menu) console.log(item);
+
+// console.log(resturant.openingHour?.fri);
+
+// // const pro = Object.keys(resturant.openingHour)
+// // console.log(pro)
+
+// const entries = Object.entries(resturant.openingHour);
+
+// for (const [key, { open, close }] of entries) {
+//   console.log(`on ${key} we open at ${open} and close at ${close}`)
+// }
+
+const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza'])
+console.log(orderSet)
