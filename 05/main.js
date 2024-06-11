@@ -31,10 +31,10 @@ async function getData() {
     }
     quoteText.textContent = data.joke;
     // getNewQuote()
+  complete()
   } catch (error) {
     console.log(error);
   }
-  complete()
 }
 const tweetQuote = function () {
   const twitterURl = `https://twitter.com/intent/tweet?text=${quoteText.textContent}`;
