@@ -180,3 +180,13 @@ printGoal(...game.scored)
 
 const orderSet = new Set(['Pasta', 'Pizza', 'Pizza', 'Risotto', 'Pasta', 'Pizza'])
 console.log(orderSet)
+const orderSets = new Set()
+orderSets.add('Hatef').add('Sina').add('Malihe').add('Siyavash')
+orderSets.delete('Hatef')
+console.log( orderSets)
+console.log(orderSets.size) 
+
+const orderMap = new Map()
+orderMap.set('hatef', 21)
+console.log(orderMap)
+
